@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About – Mammu Jr</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>About Mammu Jr</h1>
+    <p>Your friendly guide through CA Audit</p>
+</header>
+
+<nav>
+    <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+    <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
+    <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+    <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
+    <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
+    <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
+    <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+</nav>
+
+<main>
+
+    <div class="section-title">
+        <h2>About Mammu Jr</h2>
+        <p>A calm mentor-led approach to CA Audit</p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Why This Platform</h3>
+            <p>Audit felt confusing.</p>
+            <div class="more">
+                Mammu Jr exists to make Audit logical,
+                calm, and approachable for CA students.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Teaching Style</h3>
+            <p>Concept before memory.</p>
+            <div class="more">
+                Understand the “why” first.
+                Writing answers becomes natural.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Who This Is For</h3>
+            <p>CA Inter & Final students.</p>
+            <div class="more">
+                Structured learning without
+                fear or unnecessary pressure.
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>Learn Audit with clarity and confidence</p>
+</footer>
+
+</body>
+</html>

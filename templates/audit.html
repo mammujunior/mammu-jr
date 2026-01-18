@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audit Hub – Mammu Jr</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Audit Hub</h1>
+    <p>Concepts • Standards • Practical Insight</p>
+</header>
+
+<nav>
+    <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+    <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
+    <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+    <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
+    <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
+    <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
+    <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+</nav>
+
+
+<main>
+
+    <div class="section-title">
+        <h2>Audit Hub</h2>
+        <p>Testing horizontal box layout</p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Audit Foundations</h3>
+            <p>Concept clarity.</p>
+
+            <div class="more">
+                Learn what audit is and why it exists.
+                <br><br>
+                <a href="/audit-foundations">Go to Audit Foundations →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Standards on Auditing</h3>
+            <p>Structured learning.</p>
+
+            <div class="more">
+                Start with core standards explained calmly.
+                <br><br>
+                <a href="/sa-200">SA 200 →</a><br>
+                <a href="/sa-210">SA 210 →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Exam Guidance</h3>
+            <p>Score better.</p>
+
+            <div class="more">
+                Answer writing approach and
+                examiner expectations.
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <p>Audit made simple — Mammu Jr</p>
+</footer>
+
+</body>
+</html>

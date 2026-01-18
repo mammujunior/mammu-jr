@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register – Mammu Jr</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Mammu Jr</h1>
+    <p>Your Audit Mentor</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/audit">Audit Hub</a>
+    <a href="/sa-210">SA 210</a>
+    <a href="/login">Login</a>
+</nav>
+
+<main>
+
+    <div class="section-title">
+        <h2>Create Account</h2>
+        <p>Start learning audit the right way</p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Join Mammu Jr</h3>
+            <p>Free account. Paid access optional.</p>
+
+            <div class="more" style="display:block;">
+                <form>
+                    <label>Name</label><br>
+                    <input type="text" placeholder="Your name" required><br><br>
+
+                    <label>Email</label><br>
+                    <input type="email" placeholder="Your email" required><br><br>
+
+                    <label>Password</label><br>
+                    <input type="password" placeholder="Create password" required><br><br>
+
+                    <button type="submit">Create Account</button>
+                </form>
+
+                <br>
+                <p>
+                    Already have an account?
+                    <a href="/login">Login →</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>Strong foundations create confident auditors – Mammu Jr</p>
+</footer>
+
+</body>
+</html>

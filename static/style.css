@@ -1,0 +1,388 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background-color: #fbfdfc;
+    color: #2b2b2b;
+    line-height: 1.75;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+main {
+    max-width: 920px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* =========================
+   HEADER (MEDIUM, CALM)
+========================= */
+header {
+    background-color: #eef4f3;
+    padding: 36px 20px;   /* reduced height */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.1rem;   /* reduced */
+    font-weight: 600;
+    color: #1f3d3a;
+    margin-bottom: 4px;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #4a6b67;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #3b3b3b;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background-color: #eef4f3;
+    color: #1f3d3a;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.section-title p {
+    color: #6b6b6b;
+}
+
+/* =========================
+   CARDS (AESTHETIC BOXES)
+========================= */
+.card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.06);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+.card .more {
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.35s ease;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card:hover .more {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f3d3a;
+    margin-bottom: 12px;
+}
+/* =========================
+   CARD GRID (HORIZONTAL)
+========================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+    margin-top: 30px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    background-color: #1f3d3a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    background-color: #cfdede;
+    cursor: not-allowed;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: #1f3d3a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   ACCORDION (EXPANDABLE BOXES)
+========================= */
+.accordion {
+    max-width: 900px;
+    margin: auto;
+}
+
+.accordion details {
+    background-color: #ffffff;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 18px 38px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.accordion summary {
+    padding: 22px 26px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    background-color: #f4f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion summary:hover {
+    background-color: #eef4f3;
+}
+
+.accordion summary::after {
+    content: "＋";
+    font-size: 1.2rem;
+    color: #1f3d3a;
+}
+
+.accordion details[open] summary::after {
+    content: "−";
+}
+
+.accordion .content {
+    padding: 24px 26px;
+    color: #3b3b3b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #f1f5f4;
+    color: #5b5b5b;
+    text-align: center;
+    padding: 26px;
+    margin-top: 70px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    main {
+        padding: 45px 16px;
+    }
+}
+/* =========================
+   HOME TWO-COLUMN LAYOUT
+========================= */
+.home-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Sidebar */
+.home-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.home-sidebar .card {
+    margin-bottom: 20px;
+}
+
+/* Mobile: stack layout */
+@media (max-width: 900px) {
+    .home-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .home-sidebar {
+        position: static;
+    }
+}
+/* =========================
+   ACTIVE NAV LINK
+========================= */
+nav a.active {
+    background-color: #eef4f3;
+    color: #1e5b73;
+    font-weight: 600;
+}
+/* =========================
+   UNIVERSAL CARD EXPAND BEHAVIOR
+========================= */
+
+/* Allow expansion outside grid */
+.card-grid {
+    position: relative;
+    overflow: visible;
+}
+
+/* Base card behavior */
+.card {
+    position: relative;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        opacity 0.35s ease;
+    z-index: 1;
+}
+
+/* Hide extended content by default */
+.card .more {
+    display: none;
+}
+
+/* When hovering anywhere in grid, fade others */
+.card-grid:hover .card {
+    opacity: 0.4;
+    transform: scale(0.96);
+}
+
+/* Focused card */
+.card:hover {
+    opacity: 1 !important;
+    transform: scale(1.15);
+    z-index: 100;
+    box-shadow: 0 45px 90px rgba(0, 0, 0, 0.18);
+    background-color: #ffffff;
+}
+
+/* Show full content on hover */
+.card:hover .more {
+    display: block;
+    margin-top: 14px;
+}
+
+/* Mobile safety: no hover effects */
+@media (max-width: 900px) {
+    .card-grid:hover .card,
+    .card:hover {
+        opacity: 1;
+        transform: none;
+        box-shadow: 0 18px 36px rgba(0,0,0,0.06);
+    }
+
+    .card .more {
+        display: block;
+        margin-top: 10px;
+    }
+}
+/* =========================
+   FORCE FULL CONTENT VISIBILITY
+   (NO LINE / HEIGHT LIMIT)
+========================= */
+
+.card,
+.card * {
+    max-height: none !important;
+}
+
+
+
+/* Allow full expansion */
+.card {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* Ensure hidden content can fully appear */
+.card .more {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    white-space: normal !important;
+}
+
+/* When hovering, allow card to grow naturally */
+.card:hover {
+    height: auto !important;
+}
+
+/* Grid must not restrict children */
+.card-grid {
+    align-items: stretch;
+    overflow: visible !important;
+}

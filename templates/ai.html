@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Mentor – Mammu Jr</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>AI Audit Mentor</h1>
+    <p>Guided • Restricted • Exam-Oriented</p>
+</header>
+
+<nav>
+    <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+    <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
+    <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+    <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
+    <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
+    <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
+    <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+</nav>
+
+<main>
+
+    <div class="section-title">
+        <h2>AI Audit Mentor</h2>
+        <p>Guided help for CA Inter Audit</p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>What This AI Helps With</h3>
+            <p>Concept clarity.</p>
+            <div class="more">
+                This AI helps clarify CA Inter Audit concepts
+                in a structured, exam-oriented manner,
+                aligned with Mammu Jr content.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Boundaries</h3>
+            <p>Not a random chatbot.</p>
+            <div class="more">
+                This AI does not provide
+                out-of-syllabus answers,
+                guesses, or generic explanations.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Open Audit AI</h3>
+            <p>Ask your doubts.</p>
+            <div class="more">
+                Click below to open the Audit AI assistant
+                designed specifically for CA Inter students.
+                <br><br>
+                <a href="https://chatgpt.com/g/g-68fa34e7f55c8191baa5fc2a124ff7db-mohammed-bin-abdulla-your-audit-mentor" target="_blank">
+                    → Open AI Audit Mentor
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>AI guided by a mentor, not replacing one</p>
+</footer>
+
+</body>
+</html>

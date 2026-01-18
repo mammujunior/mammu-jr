@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – Mammu Jr</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Contact</h1>
+    <p>Connect with Your Audit Mentor</p>
+</header>
+
+<nav>
+    <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+    <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
+    <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+    <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
+    <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
+    <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
+    <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+</nav>
+
+
+<main>
+
+    <div class="section-title">
+        <h2>Contact</h2>
+        <p>Reach out calmly, no pressure</p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>General Queries</h3>
+            <p>About content or guidance.</p>
+            <div class="more">
+                Use this space to ask
+                study-related questions.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Feedback</h3>
+            <p>Your input matters.</p>
+            <div class="more">
+                Suggestions to improve
+                content and learning flow.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Future Collaboration</h3>
+            <p>Later possibilities.</p>
+            <div class="more">
+                Academic collaborations
+                can be explored in future.
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>Let’s master Audit together</p>
+</footer>
+
+</body>
+</html>

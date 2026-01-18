@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mammu Jr – Your Audit Mentor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Mammu Jr</h1>
+    <p>Your Audit Mentor for CA Inter Students</p>
+</header>
+
+<nav>
+    <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+    <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
+    <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+    <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
+    <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
+    <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
+    <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+</nav>
+
+
+<main>
+
+    <div class="home-layout">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="home-sidebar">
+
+            <div class="card">
+                <h3>Daily on Instagram</h3>
+                <p>Short audit clarity.</p>
+                <div class="more">
+                    I share daily audit thoughts,
+                    exam reminders, and clarity posts.
+                    <br><br>
+                    <a href="https://www.instagram.com/mammujr" target="_blank">
+                        → View Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Message on Instagram</h3>
+                <p>Quick connection.</p>
+                <div class="more">
+                    For short doubts or direction,
+                    you can DM me on Instagram.
+                    <br><br>
+                    <a href="https://ig.me/m/mammujr" target="_blank">
+                        → Open Instagram Chat
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>AI Audit Assistant</h3>
+                <p>For CA Inter Audit.</p>
+                <div class="more">
+                    Guided AI support aligned
+                    strictly with Mammu Jr content.
+                    <br><br>
+                    <a href="/ai-mentor">
+                        → Open AI Assistant
+                    </a>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <section>
+
+            <div class="section-title">
+                <h2>Audit doesn’t have to be confusing.</h2>
+                <p>
+                    Mammu Jr, your Audit mentor, who teaches Audit strictly as per ICAI Study Material with clarity, structure, and exam-oriented precision.
+                </p>
+            </div>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>Who This Is For</h3>
+                    <p>Feeling stuck with Audit?</p>
+                    <div class="more">
+                        CA students who feel Audit is theoretical,
+                        hard to remember, or difficult to write in exams.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>How I Teach Audit</h3>
+                    <p>Think like an auditor.</p>
+                    <div class="more">
+                        I focus on understanding the auditor’s mindset —
+                        why procedures exist, how standards apply,
+                        and how ICAI expects answers to be written.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>What You’ll Get Here</h3>
+                    <p>Clarity, not pressure.</p>
+                    <div class="more">
+                        Clear explanations, regular updates,
+                        structured notes, and guidance —
+                        without unnecessary pressure or confusion.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Start Free. Learn Confidently.</h3>
+                    <p>No rush. No force.</p>
+                    <div class="more">
+                        Begin with free audit content.
+                        When you’re ready, advanced materials
+                        will be available.
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Mammu Jr – Audit Mentor</p>
+</footer>
+
+</body>
+</html>
