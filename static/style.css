@@ -386,3 +386,106 @@ nav a.active {
     align-items: stretch;
     overflow: visible !important;
 }
+/* =========================
+   MOBILE RESPONSIVE STYLES
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Overall spacing */
+    body {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 18px 16px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    /* Navigation */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    /* Section titles */
+    .section-title h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .section-title p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Cards grid → single column */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 10px;
+    }
+
+    /* Cards */
+    .card {
+        transform: none !important;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card .more {
+        font-size: 14px;
+    }
+
+    /* Disable hover effects on mobile */
+    .card-grid:hover .card {
+        opacity: 1;
+        transform: none;
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    /* Forms (login/register) */
+    input, button {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    button {
+        margin-top: 8px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 13px;
+        padding: 14px;
+        text-align: center;
+    }
+}
