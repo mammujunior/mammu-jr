@@ -299,3 +299,43 @@ footer {
         opacity: 0.85;
     }
 }
+/* =========================
+   HOME SIDEBAR → MOBILE BOTTOM BAR
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Move sidebar below main content */
+    .home-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sidebar {
+        order: 2;                 /* push to bottom */
+        margin-top: 30px;
+    }
+
+    /* Horizontal cards */
+    .home-sidebar {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;         /* allow swipe */
+        padding-bottom: 10px;
+    }
+
+    .home-sidebar .card {
+        min-width: 240px;         /* card width */
+        flex-shrink: 0;
+    }
+
+    /* Smooth horizontal scrolling */
+    .home-sidebar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home-sidebar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
