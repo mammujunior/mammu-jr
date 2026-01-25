@@ -27,16 +27,16 @@ main {
 }
 
 /* =========================
-   HEADER (MEDIUM, CALM)
+   HEADER (DESKTOP)
 ========================= */
 header {
     background-color: #eef4f3;
-    padding: 36px 20px;   /* reduced height */
+    padding: 36px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.1rem;   /* reduced */
+    font-size: 2.1rem;
     font-weight: 600;
     color: #1f3d3a;
     margin-bottom: 4px;
@@ -75,6 +75,12 @@ nav a:hover {
     color: #1f3d3a;
 }
 
+nav a.active {
+    background-color: #eef4f3;
+    color: #1e5b73;
+    font-weight: 600;
+}
+
 /* =========================
    SECTION TITLES
 ========================= */
@@ -94,44 +100,7 @@ nav a:hover {
 }
 
 /* =========================
-   CARDS (AESTHETIC BOXES)
-========================= */
-.card {
-    background-color: #ffffff;
-    border-radius: 18px;
-    padding: 26px;
-    box-shadow: 0 18px 36px rgba(0,0,0,0.06);
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.card:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-}
-.card .more {
-    opacity: 0;
-    max-height: 0;
-    transition: all 0.35s ease;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.card:hover .more {
-    opacity: 1;
-    max-height: 200px;
-    margin-top: 10px;
-}
-
-.card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f3d3a;
-    margin-bottom: 12px;
-}
-/* =========================
-   CARD GRID (HORIZONTAL)
+   CARD GRID (DESKTOP)
 ========================= */
 .card-grid {
     display: grid;
@@ -141,8 +110,58 @@ nav a:hover {
 }
 
 /* =========================
-   BUTTONS
+   CARDS (DESKTOP BEHAVIOR)
 ========================= */
+.card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f3d3a;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.card .more {
+    display: none;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Desktop hover expand */
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.card:hover .more {
+    display: block;
+    margin-top: 10px;
+}
+
+/* =========================
+   LINKS & BUTTONS
+========================= */
+a {
+    color: #1f3d3a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 button {
     background-color: #1f3d3a;
     color: #ffffff;
@@ -158,70 +177,6 @@ button:hover {
     opacity: 0.9;
 }
 
-button:disabled {
-    background-color: #cfdede;
-    cursor: not-allowed;
-}
-
-/* =========================
-   LINKS
-========================= */
-a {
-    color: #1f3d3a;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   ACCORDION (EXPANDABLE BOXES)
-========================= */
-.accordion {
-    max-width: 900px;
-    margin: auto;
-}
-
-.accordion details {
-    background-color: #ffffff;
-    border-radius: 18px;
-    margin-bottom: 20px;
-    box-shadow: 0 18px 38px rgba(0,0,0,0.06);
-    overflow: hidden;
-}
-
-.accordion summary {
-    padding: 22px 26px;
-    font-size: 1.15rem;
-    font-weight: 500;
-    cursor: pointer;
-    list-style: none;
-    background-color: #f4f7f7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.accordion summary:hover {
-    background-color: #eef4f3;
-}
-
-.accordion summary::after {
-    content: "＋";
-    font-size: 1.2rem;
-    color: #1f3d3a;
-}
-
-.accordion details[open] summary::after {
-    content: "−";
-}
-
-.accordion .content {
-    padding: 24px 26px;
-    color: #3b3b3b;
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -235,24 +190,6 @@ footer {
 }
 
 /* =========================
-   MOBILE
-========================= */
-@media (max-width: 700px) {
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 14px;
-    }
-
-    main {
-        padding: 45px 16px;
-    }
-}
-/* =========================
    HOME TWO-COLUMN LAYOUT
 ========================= */
 .home-layout {
@@ -262,7 +199,6 @@ footer {
     align-items: start;
 }
 
-/* Sidebar */
 .home-sidebar {
     position: sticky;
     top: 120px;
@@ -272,143 +208,24 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Mobile: stack layout */
-@media (max-width: 900px) {
-    .home-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .home-sidebar {
-        position: static;
-    }
-}
 /* =========================
-   ACTIVE NAV LINK
+   MOBILE EXPERIENCE (ONLY)
 ========================= */
-nav a.active {
-    background-color: #eef4f3;
-    color: #1e5b73;
-    font-weight: 600;
-}
-/* =========================
-   UNIVERSAL CARD EXPAND BEHAVIOR
-========================= */
-
-/* Allow expansion outside grid */
-.card-grid {
-    position: relative;
-    overflow: visible;
-}
-
-/* Base card behavior */
-.card {
-    position: relative;
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease,
-        opacity 0.35s ease;
-    z-index: 1;
-}
-
-/* Hide extended content by default */
-.card .more {
-    display: none;
-}
-
-/* When hovering anywhere in grid, fade others */
-.card-grid:hover .card {
-    opacity: 0.4;
-    transform: scale(0.96);
-}
-
-/* Focused card */
-.card:hover {
-    opacity: 1 !important;
-    transform: scale(1.15);
-    z-index: 100;
-    box-shadow: 0 45px 90px rgba(0, 0, 0, 0.18);
-    background-color: #ffffff;
-}
-
-/* Show full content on hover */
-.card:hover .more {
-    display: block;
-    margin-top: 14px;
-}
-
-/* Mobile safety: no hover effects */
-@media (max-width: 900px) {
-    .card-grid:hover .card,
-    .card:hover {
-        opacity: 1;
-        transform: none;
-        box-shadow: 0 18px 36px rgba(0,0,0,0.06);
-    }
-
-    .card .more {
-        display: block;
-        margin-top: 10px;
-    }
-}
-/* =========================
-   FORCE FULL CONTENT VISIBILITY
-   (NO LINE / HEIGHT LIMIT)
-========================= */
-
-.card,
-.card * {
-    max-height: none !important;
-}
-
-
-
-/* Allow full expansion */
-.card {
-    height: auto !important;
-    overflow: visible !important;
-}
-
-/* Ensure hidden content can fully appear */
-.card .more {
-    max-height: none !important;
-    height: auto !important;
-    overflow: visible !important;
-    white-space: normal !important;
-}
-
-/* When hovering, allow card to grow naturally */
-.card:hover {
-    height: auto !important;
-}
-
-/* Grid must not restrict children */
-.card-grid {
-    align-items: stretch;
-    overflow: visible !important;
-}
-/* =========================
-   MOBILE UI POLISH (SAFE)
-   Desktop NOT affected
-========================= */
-
 @media (max-width: 768px) {
 
-    /* Overall body spacing */
+    /* General text */
     body {
         font-size: 15px;
-        line-height: 1.7;
         background-color: #f7f9fb;
     }
 
     /* Header */
     header {
-        padding: 16px 14px;
-        text-align: center;
+        padding: 18px 14px;
     }
 
     header h1 {
         font-size: 22px;
-        margin-bottom: 4px;
     }
 
     header p {
@@ -418,136 +235,67 @@ nav a.active {
 
     /* Navigation */
     nav {
-        padding: 10px;
-        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
+        padding: 10px;
     }
 
     nav a {
         font-size: 14px;
         padding: 6px 10px;
-        border-radius: 6px;
     }
 
-    /* Section title */
-    .section-title {
-        margin: 20px 12px;
-        text-align: center;
+    /* Main spacing */
+    main {
+        padding: 45px 16px;
     }
 
-    .section-title h2 {
-        font-size: 20px;
+    /* Stack layout */
+    .home-layout {
+        grid-template-columns: 1fr;
     }
 
-    .section-title p {
-        font-size: 14px;
-        opacity: 0.85;
+    .home-sidebar {
+        position: static;
     }
 
     /* Cards layout */
     .card-grid {
         grid-template-columns: 1fr;
-        gap: 18px;
         padding: 0 12px;
     }
 
-    /* Cards look */
-    .card {
-        border-radius: 14px;
-        padding: 16px;
-        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-        background-color: #ffffff;
-    }
-
-    .card h3 {
-        font-size: 16px;
-        margin-bottom: 6px;
-    }
-
-    .card p {
-        font-size: 14px;
-        opacity: 0.9;
-    }
-
-    /* Card content */
-    .card .more {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    /* Buttons & inputs */
-    button, input {
-        width: 100%;
-        font-size: 15px;
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    button {
-        margin-top: 8px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 16px;
-        font-size: 13px;
-        text-align: center;
-        opacity: 0.85;
-    }
-}
-
-/* =========================
-   MOBILE SCROLL ANIMATION
-========================= */
-
-@media (max-width: 768px) {
-
+    /* Scroll reveal animation */
     .card {
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-out;
+        transform: translateY(40px);
+        transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 0 14px 30px rgba(0,0,0,0.08);
     }
 
     .card.active {
         opacity: 1;
         transform: translateY(0);
     }
-}
-@media (max-width: 768px) {
 
-    /* Card default (collapsed) */
-    .card {
-        cursor: pointer;
-    }
-
+    /* FULL CONTENT VISIBLE ON MOBILE */
     .card .more {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: all 0.4s ease;
-    }
-
-    /* Expanded card */
-    .card.expanded .more {
-        max-height: 500px; /* enough for content */
-        opacity: 1;
-        margin-top: 10px;
-    }
-
-    /* Visual cue */
-    .card::after {
-        content: "Tap to explore ↓";
         display: block;
-        font-size: 13px;
-        opacity: 0.6;
-        margin-top: 8px;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
-    .card.expanded::after {
-        content: "Tap to close ↑";
-        opacity: 0.5;
+    /* Disable hover effects */
+    .card:hover {
+        transform: none;
+        box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    }
+
+    /* Footer */
+    footer {
+        padding: 16px;
+        font-size: 13px;
+        opacity: 0.85;
     }
 }
-
