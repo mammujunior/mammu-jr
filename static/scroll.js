@@ -1,5 +1,3 @@
-console.log("scroll.js loaded");
-
 // Scroll animation ONLY for mobile devices
 if (window.innerWidth <= 768) {
 
