@@ -387,95 +387,102 @@ nav a.active {
     overflow: visible !important;
 }
 /* =========================
-   MOBILE RESPONSIVE STYLES
+   MOBILE UI POLISH (SAFE)
+   Desktop NOT affected
 ========================= */
 
 @media (max-width: 768px) {
 
-    /* Overall spacing */
+    /* Overall body spacing */
     body {
         font-size: 15px;
-        line-height: 1.6;
+        line-height: 1.7;
+        background-color: #f7f9fb;
     }
 
+    /* Header */
     header {
-        padding: 18px 16px;
+        padding: 16px 14px;
         text-align: center;
     }
 
     header h1 {
         font-size: 22px;
+        margin-bottom: 4px;
     }
 
     header p {
         font-size: 14px;
+        opacity: 0.85;
     }
 
     /* Navigation */
     nav {
+        padding: 10px;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-        padding: 12px;
     }
 
     nav a {
         font-size: 14px;
         padding: 6px 10px;
+        border-radius: 6px;
     }
 
-    /* Section titles */
+    /* Section title */
+    .section-title {
+        margin: 20px 12px;
+        text-align: center;
+    }
+
     .section-title h2 {
         font-size: 20px;
-        text-align: center;
     }
 
     .section-title p {
         font-size: 14px;
-        text-align: center;
+        opacity: 0.85;
     }
 
-    /* Cards grid → single column */
+    /* Cards layout */
     .card-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 0 10px;
+        gap: 18px;
+        padding: 0 12px;
     }
 
-    /* Cards */
+    /* Cards look */
     .card {
-        transform: none !important;
-        box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+        background-color: #ffffff;
     }
 
     .card h3 {
         font-size: 16px;
+        margin-bottom: 6px;
     }
 
     .card p {
         font-size: 14px;
+        opacity: 0.9;
     }
 
+    /* Card content */
     .card .more {
         font-size: 14px;
+        line-height: 1.6;
     }
 
-    /* Disable hover effects on mobile */
-    .card-grid:hover .card {
-        opacity: 1;
-        transform: none;
-    }
-
-    .card:hover {
-        transform: none;
-        box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-    }
-
-    /* Forms (login/register) */
-    input, button {
+    /* Buttons & inputs */
+    button, input {
         width: 100%;
         font-size: 15px;
         padding: 10px;
+        border-radius: 8px;
     }
 
     button {
@@ -484,9 +491,10 @@ nav a.active {
 
     /* Footer */
     footer {
+        padding: 16px;
         font-size: 13px;
-        padding: 14px;
         text-align: center;
+        opacity: 0.85;
     }
 }
 
@@ -506,9 +514,40 @@ nav a.active {
         opacity: 1;
         transform: translateY(0);
     }
+}
+@media (max-width: 768px) {
 
-    /* No hover effect on mobile */
-    .card:hover {
-        transform: none;
+    /* Card default (collapsed) */
+    .card {
+        cursor: pointer;
+    }
+
+    .card .more {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    /* Expanded card */
+    .card.expanded .more {
+        max-height: 500px; /* enough for content */
+        opacity: 1;
+        margin-top: 10px;
+    }
+
+    /* Visual cue */
+    .card::after {
+        content: "Tap to explore ↓";
+        display: block;
+        font-size: 13px;
+        opacity: 0.6;
+        margin-top: 8px;
+    }
+
+    .card.expanded::after {
+        content: "Tap to close ↑";
+        opacity: 0.5;
     }
 }
+
