@@ -299,49 +299,13 @@ footer {
         opacity: 0.85;
     }
 }
-/* =========================
-   HOME SIDEBAR – MOBILE (3 CARDS VISIBLE)
-========================= */
-
-@media (max-width: 768px) {
-
-    /* Stack main + sidebar */
-    .home-layout section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Move sidebar to bottom */
-    .home-sidebar {
-        order: 2;
-        margin-top: 30px;
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        padding: 10px 12px 16px;
-    }
-
-    /* Sidebar cards compact */
-    .home-sidebar .card {
-        margin: 0;
-        padding: 14px;
-    }
-
-    .home-sidebar .card h3 {
-        font-size: 14px;
-        margin-bottom: 6px;
-    }
-
-    .home-sidebar .card p {
-        font-size: 12px;
-    }
-
-    .home-sidebar .card .more {
-        font-size: 12px;
-        margin-top: 6px;
-    }
+/* Desktop sidebar icon size */
+.sidebar-icon-link .icon {
+    width: 20px;
+    height: 20px;
+    fill: #1f3d3a;
 }
+
 /* =========================
    MOBILE SIDEBAR ICON MODE
 ========================= */
@@ -388,15 +352,18 @@ footer {
     }
 }
 /* =========================
-   SA VIDEO
+   SA VIDEO (LANDSCAPE)
 ========================= */
 .sa-video {
     max-width: 820px;
-    margin: 30px auto 10px;
+    margin: 30px auto 20px;
 }
 
 .sa-video video {
     width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+    display: block;
 }

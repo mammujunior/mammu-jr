@@ -34,11 +34,12 @@
         <p>Move your mouse over any topic to focus and explore</p>
     </div>
 <div class="sa-video">
-    <video controls preload="metadata">
+    <video controls preload="none" poster="{{ url_for('static', filename='videos/sa200.jpg') }}">
         <source src="{{ url_for('static', filename='videos/sa200.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
+
 
     <div class="card-grid">
 
