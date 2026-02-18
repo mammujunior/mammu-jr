@@ -300,13 +300,12 @@ footer {
     }
 }
 /* =========================
-   HOME SIDEBAR – MOBILE FIX
-   (based on current HTML)
+   HOME SIDEBAR – MOBILE (3 CARDS VISIBLE)
 ========================= */
 
 @media (max-width: 768px) {
 
-    /* Make section a vertical stack */
+    /* Stack main + sidebar */
     .home-layout section {
         display: flex;
         flex-direction: column;
@@ -316,28 +315,30 @@ footer {
     .home-sidebar {
         order: 2;
         margin-top: 30px;
-    }
 
-    /* Horizontal card row */
-    .home-sidebar {
-        display: flex;
-        gap: 14px;
-        overflow-x: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
         padding: 10px 12px 16px;
     }
 
+    /* Sidebar cards compact */
     .home-sidebar .card {
-        min-width: 240px;
-        flex-shrink: 0;
+        margin: 0;
+        padding: 14px;
     }
 
-    /* Hide scrollbar (clean look) */
-    .home-sidebar::-webkit-scrollbar {
-        display: none;
+    .home-sidebar .card h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
     }
 
-    .home-sidebar {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+    .home-sidebar .card p {
+        font-size: 12px;
+    }
+
+    .home-sidebar .card .more {
+        font-size: 12px;
+        margin-top: 6px;
     }
 }
