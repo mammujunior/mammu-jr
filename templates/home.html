@@ -16,13 +16,13 @@
 <nav class="navbar">
 
     <div class="nav-left">
-        <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
-        <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
-        <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
-        <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
-        <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
-        <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
-        <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+        <a href="/">Home</a>
+        <a href="/audit">Audit Hub</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/materials">Materials</a>
+        <a href="/ai-mentor">AI Mentor</a>
+        <a href="/contact">Contact</a>
     </div>
 
     <div class="nav-right">
@@ -30,6 +30,7 @@
     </div>
 
 </nav>
+
 
 
 
@@ -104,90 +105,99 @@
 </aside>
 
 
-        <!-- MAIN CONTENT -->
-        <section class="home-main">
+<!-- MAIN CONTENT COLUMN -->
+<div class="home-main">
 
-            <div class="section-title">
-                <h2>Audit doesn’t have to be confusing.</h2>
-                <p>
-                    Mammu Jr, your Audit mentor, who teaches Audit strictly as per ICAI Study Material with clarity, structure, and exam-oriented precision.
-                </p>
-            </div>
+    <!-- INTRO SECTION -->
+    <section>
 
-            <div class="card-grid">
-
-                <div class="card">
-                    <h3>Who This Is For</h3>
-                    <p>Feeling stuck with Audit?</p>
-                    <div class="more">
-                        CA students who feel Audit is theoretical,
-                        hard to remember, or difficult to write in exams.
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>How I Teach Audit</h3>
-                    <p>Think like an auditor.</p>
-                    <div class="more">
-                        I focus on understanding the auditor’s mindset —
-                        why procedures exist, how standards apply,
-                        and how ICAI expects answers to be written.
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>What You’ll Get Here</h3>
-                    <p>Clarity, not pressure.</p>
-                    <div class="more">
-                        Clear explanations, regular updates,
-                        structured notes, and guidance —
-                        without unnecessary pressure or confusion.
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Start Free. Learn Confidently.</h3>
-                    <p>No rush. No force.</p>
-                    <div class="more">
-                        Begin with free audit content.
-                        When you’re ready, advanced materials
-                        will be available.
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-<section class="home-mcq">
-    <div class="section-title">
-        <h2>Practice MCQs</h2>
-        <p>Test your audit understanding with exam-style questions</p>
-    </div>
-
-    <div class="card-grid">
-
-        <div class="card">
-            <h3>SA 200 MCQs</h3>
-            <p>5 free questions</p>
-            <div class="more">
-                Attempt exam-oriented MCQs from SA 200.
-                <br><br>
-                <a href="/mcq/sa200">Start Practice</a>
-            </div>
+        <div class="section-title">
+            <h2>Audit doesn’t have to be confusing.</h2>
+            <p>
+                Mammu Jr, your Audit mentor, who teaches Audit strictly as per ICAI Study Material with clarity, structure, and exam-oriented precision.
+            </p>
         </div>
 
-        <div class="card">
-            <h3>Full MCQ Bank</h3>
-            <p>All SA topics</p>
-            <div class="more">
-                Access complete audit MCQ bank.
-                <br><br>
-                <span class="locked">🔒 Login required</span>
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>Who This Is For</h3>
+                <p>Feeling stuck with Audit?</p>
+                <div class="more">
+                    CA students who feel Audit is theoretical,
+                    hard to remember, or difficult to write in exams.
+                </div>
             </div>
+
+            <div class="card">
+                <h3>How I Teach Audit</h3>
+                <p>Think like an auditor.</p>
+                <div class="more">
+                    I focus on understanding the auditor’s mindset —
+                    why procedures exist, how standards apply,
+                    and how ICAI expects answers to be written.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>What You’ll Get Here</h3>
+                <p>Clarity, not pressure.</p>
+                <div class="more">
+                    Clear explanations, regular updates,
+                    structured notes, and guidance —
+                    without unnecessary pressure or confusion.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Start Free. Learn Confidently.</h3>
+                <p>No rush. No force.</p>
+                <div class="more">
+                    Begin with free audit content.
+                    When you’re ready, advanced materials
+                    will be available.
+                </div>
+            </div>
+
         </div>
 
-    </div>
-</section>
+    </section>
+
+    <!-- MCQ SECTION -->
+    <section class="home-mcq">
+
+        <div class="section-title">
+            <h2>Practice MCQs</h2>
+            <p>Test your audit understanding with exam-style questions</p>
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>SA 200 MCQs</h3>
+                <p>5 free questions</p>
+                <div class="more">
+                    Attempt exam-oriented MCQs from SA 200.
+                    <br><br>
+                    <a href="/mcq/sa200">Start Practice</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Full MCQ Bank</h3>
+                <p>All SA topics</p>
+                <div class="more">
+                    Access complete audit MCQ bank.
+                    <br><br>
+                    <a href="/login" class="locked">🔒 Login to unlock</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
 
         
 
