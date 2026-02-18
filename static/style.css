@@ -374,8 +374,11 @@ footer {
     }
 
     .sidebar-icon-link .icon {
-        font-size: 26px;
-    }
+    width: 26px;
+    height: 26px;
+    fill: #1f3d3a;
+}
+
 
     /* hide text on mobile */
     .home-sidebar h3,
