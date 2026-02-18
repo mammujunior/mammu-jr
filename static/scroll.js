@@ -1,8 +1,8 @@
+// Mobile-only scroll reveal
 if (window.innerWidth <= 768) {
 
     const cards = document.querySelectorAll(".card");
 
-    // Scroll reveal
     const observer = new IntersectionObserver(
         entries => {
             entries.forEach(entry => {
@@ -15,12 +15,5 @@ if (window.innerWidth <= 768) {
         { threshold: 0.15 }
     );
 
-    cards.forEach(card => {
-        observer.observe(card);
-
-        // Tap to expand
-        card.addEventListener("click", () => {
-            card.classList.toggle("expanded");
-        });
-    });
+    cards.forEach(card => observer.observe(card));
 }
