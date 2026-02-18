@@ -455,3 +455,38 @@ nav {
 .login-box button {
     width: 100%;
 }
+/* NAVBAR LAYOUT */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 14px 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-left {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #1f3d3a;
+    color: #fff;
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}

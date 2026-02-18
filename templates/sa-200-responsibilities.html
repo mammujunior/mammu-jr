@@ -14,20 +14,24 @@
     <p>Auditor vs Management Responsibility</p>
 </header>
 
-<nav>
+<nav class="navbar">
+
     <div class="nav-left">
-        <a href="/">Home</a>
-        <a href="/audit">Audit Hub</a>
-        <a href="/blog">Blog</a>
-        <a href="/materials">Materials</a>
-        <a href="/ai-mentor">AI Mentor</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+        <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
+        <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+        <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
+        <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
+        <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
+        <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
     </div>
 
     <div class="nav-right">
         <a href="/login" class="login-btn">Login</a>
     </div>
+
 </nav>
+
 
 
 <main>
