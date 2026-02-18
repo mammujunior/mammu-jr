@@ -244,6 +244,34 @@ footer {
         font-size: 14px;
         padding: 6px 10px;
     }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    gap: 26px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #1f3d3a;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
 
     /* Main spacing */
     main {
@@ -366,4 +394,64 @@ footer {
     border-radius: 14px;
     box-shadow: 0 16px 36px rgba(0,0,0,0.12);
     display: block;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    gap: 26px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #1f3d3a;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+.locked {
+    color: #b08a00;
+    font-weight: 500;
+}
+/* =========================
+   LOGIN
+========================= */
+.login-box {
+    max-width: 380px;
+    margin: 60px auto;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 18px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 0.95rem;
+}
+
+.login-box button {
+    width: 100%;
 }

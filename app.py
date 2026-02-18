@@ -1,3 +1,5 @@
+from flask import session
+app.secret_key = "mammujr_secret"
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -95,3 +97,17 @@ def register():
 
 if __name__ == "__main__":
     app.run(debug=True)
+from flask import request, redirect, session
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+
+        # Demo login (we'll replace later)
+        if username == "student" and password == "audit123":
+            session["user"] = username
+            return redirect("/")
+    
+    return render_template("login.html")

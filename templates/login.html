@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login – Mammu Jr</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -16,54 +14,38 @@
 </header>
 
 <nav>
-    <a href="/">Home</a>
-    <a href="/audit">Audit Hub</a>
-    <a href="/sa-210">SA 210</a>
-    <a href="/login">Login</a>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/audit">Audit Hub</a>
+        <a href="/blog">Blog</a>
+        <a href="/materials">Materials</a>
+        <a href="/ai-mentor">AI Mentor</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="/login" class="login-btn">Login</a>
+    </div>
 </nav>
 
 <main>
 
-    <div class="section-title">
-        <h2>Login</h2>
-        <p>Access your learning dashboard</p>
-    </div>
+    <div class="login-box">
+        <h2>Student Login</h2>
 
-    <div class="card-grid">
-
-        <div class="card">
-            <h3>Welcome Back</h3>
-            <p>Continue your audit journey.</p>
-
-            <div class="more" style="display:block;">
-                <form>
-                    <label>Email</label><br>
-                    <input type="email" placeholder="Enter your email" required><br><br>
-
-                    <label>Password</label><br>
-                    <input type="password" placeholder="Enter your password" required><br><br>
-
-                    <button type="submit">Login</button>
-                </form>
-
-                <br>
-                <p>
-                    New here?
-                    <a href="/register">Create an account →</a>
-                </p>
-            </div>
-        </div>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Email or Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
 
     </div>
 
 </main>
 
 <footer>
-    <p>Learning audit with clarity – Mammu Jr</p>
+    <p>© 2026 Mammu Jr – Audit Mentor</p>
 </footer>
-
-<script src="{{ url_for('static', filename='scroll.js') }}"></script>
-
 
 </body>
 </html>

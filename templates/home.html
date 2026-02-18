@@ -14,14 +14,20 @@
 </header>
 
 <nav>
-    <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
-    <a href="/audit" class="{{ 'active' if request.path == '/audit' else '' }}">Audit Hub</a>
-    <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
-    <a href="/blog" class="{{ 'active' if request.path == '/blog' else '' }}">Blog</a>
-    <a href="/materials" class="{{ 'active' if request.path == '/materials' else '' }}">Materials</a>
-    <a href="/ai-mentor" class="{{ 'active' if request.path == '/ai-mentor' else '' }}">AI Mentor</a>
-    <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/audit">Audit Hub</a>
+        <a href="/blog">Blog</a>
+        <a href="/materials">Materials</a>
+        <a href="/ai-mentor">AI Mentor</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="/login" class="login-btn">Login</a>
+    </div>
 </nav>
+
 
 
 <main>
@@ -148,6 +154,36 @@
             </div>
 
         </section>
+<section class="home-mcq">
+    <div class="section-title">
+        <h2>Practice MCQs</h2>
+        <p>Test your audit understanding with exam-style questions</p>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>SA 200 MCQs</h3>
+            <p>5 free questions</p>
+            <div class="more">
+                Attempt exam-oriented MCQs from SA 200.
+                <br><br>
+                <a href="/mcq/sa200">Start Practice</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Full MCQ Bank</h3>
+            <p>All SA topics</p>
+            <div class="more">
+                Access complete audit MCQ bank.
+                <br><br>
+                <span class="locked">🔒 Login required</span>
+            </div>
+        </div>
+
+    </div>
+</section>
 
         
 
