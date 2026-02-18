@@ -342,3 +342,45 @@ footer {
         margin-top: 6px;
     }
 }
+/* =========================
+   MOBILE SIDEBAR ICON MODE
+========================= */
+@media (max-width: 768px) {
+
+    .home-sidebar {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .home-sidebar .card {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .sidebar-icon-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #eef4f3;
+        text-decoration: none;
+        margin: auto;
+    }
+
+    .sidebar-icon-link .icon {
+        font-size: 26px;
+    }
+
+    /* hide text on mobile */
+    .home-sidebar h3,
+    .home-sidebar p,
+    .home-sidebar .more {
+        display: none;
+    }
+}
